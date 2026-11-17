@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 558" width="760" height="558" role="img"
+     aria-label="One set of sub-cluster marker tables feeds every downstream analysis"
+     font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13">
+  <title>One set of sub-cluster marker tables feeds every downstream analysis</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#6e7781"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="558" rx="10" fill="#ffffff"/>
+
+  <text x="24" y="30" font-size="15" font-weight="600" fill="#1f2328">One set of sub-cluster marker tables feeds every downstream analysis</text>
+
+  <!-- connectors -->
+  <g fill="none" stroke="#6e7781" stroke-width="1.25">
+    <path d="M250 110V138" marker-end="url(#arrow)"/>
+    <path d="M250 190V218" marker-end="url(#arrow)"/>
+    <path d="M250 270V298" marker-end="url(#arrow)"/>
+    <path d="M250 350V378" marker-end="url(#arrow)"/>
+    <path d="M450 244H496" marker-end="url(#arrow)"/>
+    <path d="M640 270V482" marker-end="url(#arrow)"/>
+    <path d="M250 430V456H132V482" marker-end="url(#arrow)"/>
+    <path d="M250 430V456H368V482" marker-end="url(#arrow)"/>
+    <path d="M250 430V456H568V482" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- main line -->
+  <g text-anchor="middle">
+    <rect x="50" y="58" width="400" height="52" rx="8" fill="none" stroke="#6e7781" stroke-width="1.25"/>
+    <text x="250" y="80" font-weight="600" fill="#1f2328">17 datasets</text>
+    <text x="250" y="98" font-size="11.5" fill="#59636e">16 single-cell or single-nucleus + 1 spatial (Visium)</text>
+
+    <rect x="50" y="138" width="400" height="52" rx="8" fill="none" stroke="#6e7781" stroke-width="1.25"/>
+    <text x="250" y="160" font-weight="600" fill="#1f2328">Cluster each dataset separately</text>
+    <text x="250" y="178" font-size="11.5" fill="#59636e">Seurat: clusters and marker genes per dataset</text>
+
+    <rect x="50" y="218" width="400" height="52" rx="8" fill="none" stroke="#6e7781" stroke-width="1.25"/>
+    <text x="250" y="240" font-weight="600" fill="#1f2328">Compare marker genes across datasets</text>
+    <text x="250" y="258" font-size="11.5" fill="#59636e">Jaccard index and network, four classes (Fig. 1a–b)</text>
+
+    <rect x="50" y="298" width="400" height="52" rx="8" fill="none" stroke="#6e7781" stroke-width="1.25"/>
+    <text x="250" y="320" font-weight="600" fill="#1f2328">Integrate each class separately</text>
+    <text x="250" y="338" font-size="11.5" fill="#59636e">Hildreth dropped; 4 methods compared, scVI chosen (Fig. 1e)</text>
+
+    <rect x="50" y="378" width="400" height="52" rx="8" fill="#0969da" fill-opacity="0.1" stroke="#0969da" stroke-width="2"/>
+    <text x="250" y="400" font-weight="600" fill="#1f2328">Re-cluster into sub-clusters</text>
+    <text x="250" y="418" font-size="11.5" fill="#59636e">One marker table per sub-cluster (Fig. 2–5)</text>
+
+    <!-- spatial side branch -->
+    <rect x="496" y="218" width="216" height="52" rx="8" fill="none" stroke="#6e7781" stroke-width="1.25"/>
+    <text x="604" y="240" font-weight="600" fill="#1f2328">Spatial data kept apart</text>
+    <text x="604" y="258" font-size="11.5" fill="#59636e">Bäckdahl Visium sections</text>
+
+    <!-- downstream analyses -->
+    <rect x="24" y="482" width="216" height="52" rx="8" fill="none" stroke="#6e7781" stroke-width="1.25"/>
+    <text x="132" y="504" font-weight="600" fill="#1f2328">Bulk deconvolution</text>
+    <text x="132" y="522" font-size="11.5" fill="#59636e">BisqueRNA (Fig. 2c, 3g, 8)</text>
+
+    <rect x="260" y="482" width="216" height="52" rx="8" fill="none" stroke="#6e7781" stroke-width="1.25"/>
+    <text x="368" y="504" font-weight="600" fill="#1f2328">Cell–cell communication</text>
+    <text x="368" y="522" font-size="11.5" fill="#59636e">CellChat (Fig. 6)</text>
+
+    <rect x="496" y="482" width="216" height="52" rx="8" fill="none" stroke="#6e7781" stroke-width="1.25"/>
+    <text x="604" y="504" font-weight="600" fill="#1f2328">Spatial deconvolution</text>
+    <text x="604" y="522" font-size="11.5" fill="#59636e">cell2location (Fig. 7)</text>
+  </g>
+</svg>

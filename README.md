@@ -25,24 +25,7 @@ The paper pools 17 single-cell, single-nucleus and spatial transcriptomic datase
 
 One main line with three downstream branches. Almost everything downstream passes through one interface: the marker table of each sub-cluster.
 
-```mermaid
-flowchart TD
-    A["17 datasets<br/>16 single-cell or single-nucleus + 1 spatial (Visium)"]
-    B["Cluster each dataset separately<br/>Seurat: clusters and marker genes per dataset"]
-    C["Compare marker genes across datasets<br/>Jaccard index and network, four classes (Fig. 1a-b)"]
-    D["Integrate each class separately<br/>Hildreth dropped, 4 methods compared, scVI chosen (Fig. 1e)"]
-    E["Re-cluster on the scVI latent space<br/>sub-clusters, one marker table each (Fig. 2-5)"]
-    S["Spatial data kept apart<br/>Bäckdahl Visium sections"]
-    F["Bulk deconvolution<br/>BisqueRNA (Fig. 2c, 3g, 8)"]
-    G["Cell-cell communication<br/>CellChat (Fig. 6)"]
-    H["Spatial deconvolution<br/>cell2location (Fig. 7)"]
-    A --> B --> C --> D --> E
-    C --> S
-    E --> F
-    E --> G
-    E --> H
-    S --> H
-```
+![Pipeline: 17 datasets are clustered separately, compared by marker genes, integrated per class with scVI and re-clustered; the resulting marker tables feed bulk deconvolution, cell-cell communication and spatial deconvolution](assets/pipeline.svg)
 
 Two side notes on the diagram:
 
